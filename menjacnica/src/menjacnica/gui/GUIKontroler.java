@@ -8,8 +8,8 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 import menjacnica.Menjacnica;
-import menjacnica.MenjacnicaInterface;
 import menjacnica.Valuta;
+import menjacnica.interfejs.MenjacnicaInterface;
 
 public class GUIKontroler {
 
