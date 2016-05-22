@@ -50,13 +50,12 @@ public class IzvrsiZamenuGUI extends JFrame {
 	private JLabel lblKonacniIznos;
 	private JTextField textFieldKonacniIznos;
 
-	private MenjacnicaGUI glavniProzor;
 	private Valuta valuta;
 
 	/**
 	 * Create the frame.
 	 */
-	public IzvrsiZamenuGUI(MenjacnicaGUI glavniProzor, Valuta valuta) {
+	public IzvrsiZamenuGUI(Valuta valuta) {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(IzvrsiZamenuGUI.class.getResource("/icons/Screenshot.png")));
 		setTitle("Izvrsi zamenu");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -83,7 +82,6 @@ public class IzvrsiZamenuGUI extends JFrame {
 		contentPane.add(getTextFieldKonacniIznos());
 		
 		//podesavanje
-		this.glavniProzor = glavniProzor;
 		this.valuta = valuta;
 				
 		prikaziValutu();

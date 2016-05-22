@@ -31,19 +31,19 @@ public class GUIKontroler {
 	}
 	
 	public static void prikaziDodajKursGUI() {
-		DodajKursGUI prozor = new DodajKursGUI(glavniProzor);
+		DodajKursGUI prozor = new DodajKursGUI();
 		prozor.setLocationRelativeTo(null);
 		prozor.setVisible(true);
 	}
 	
 	public static void prikaziObrisiKursGUI(Valuta valuta) {
-			ObrisiKursGUI prozor = new ObrisiKursGUI(glavniProzor,valuta);
+			ObrisiKursGUI prozor = new ObrisiKursGUI(valuta);
 			prozor.setLocationRelativeTo(null);
 			prozor.setVisible(true);
 	}
 	
 	public static void prikaziIzvrsiZamenu(Valuta valuta) {
-		IzvrsiZamenuGUI prozor = new IzvrsiZamenuGUI(glavniProzor, valuta);
+		IzvrsiZamenuGUI prozor = new IzvrsiZamenuGUI(valuta);
 		prozor.setLocationRelativeTo(null);
 		prozor.setVisible(true);
 	}
@@ -109,7 +109,7 @@ public class GUIKontroler {
 			valuta.setSrednji(Double.parseDouble(srednjiKurs));
 			
 			// Dodavanje valute u kursnu listu
-			glavniProzor.sistem.dodajValutu(valuta);
+			sistem.dodajValutu(valuta);
 
 			// Osvezavanje glavnog prozora
 			glavniProzor.prikaziSveValute();
@@ -122,7 +122,7 @@ public class GUIKontroler {
 	
 	public static void obrisiValutu(Valuta valuta) {
 		try{
-			glavniProzor.sistem.obrisiValutu(valuta);
+			sistem.obrisiValutu(valuta);
 			
 			glavniProzor.prikaziSveValute();
 		} catch (Exception e1) {
